@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drink Master</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  
+  <div class="container background">
+
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+          <a class="navbar-brand logo-item" href="./index.html">Drink Master</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="./index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Recipes</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Blog</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Search Bar -->
+      <section id="searchBar" class="searchBar">
+        <div>
+          <div class="input-group my-5">
+            <input onchange="searchRecipe()" type="text" class="form-control" id="searchInput"
+              placeholder="Search fo Drinks..." aria-describedby="btnGroupAddon">
+            <button onclick="searchRecipe()" class="input-group-text btn-primary" id="searchBtn">Search</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- error msg (if any) -->
+      <section id="errorMsg" style="display: none;">
+        <p> Sorry! No Drinks found by the keyword! Please try again!</p>
+      </section>
+
+      <!-- Search results display -->
+      <section id="foodCart">
+      </section>
+
+      <!-- Detailed recipe -->
+      <section id="detailRecipe" style="display: none;">
+        <div class="card mb-5" style="width: 40rem;">
+          <img src="" class="card-img-top" alt="image" id="recipeImg">
+          <div class="card-body">
+            <p id="origin"></p>
+            <h1 id="recipeName"></h1>
+            <h5 class="my-3">Ingredients:</h5>
+            <ul id="ingredientsList"></ul>
+            <h5 class="my-3">Instructions:</h5>
+            <p id="instructions"></p>
+            
+            <br>
+            <button type="button" class="btn btn-primary my-3" id="backBtn" onclick="back()">Back</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+    crossorigin="anonymous"></script>
+  <script src="script2.js"></script>
+</body>
+
+</html>
